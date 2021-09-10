@@ -30,7 +30,7 @@ CREATE TABLE `app_info` (
                             `password` varchar(255) DEFAULT NULL,
                             PRIMARY KEY (`id`),
                             UNIQUE KEY `appNameUK` (`app_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for container_info
@@ -49,7 +49,7 @@ CREATE TABLE `container_info` (
                                   `version` varchar(255) DEFAULT NULL,
                                   PRIMARY KEY (`id`),
                                   KEY `IDX8hixyaktlnwil2w9up6b0p898` (`app_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for instance_info
@@ -78,7 +78,7 @@ CREATE TABLE `instance_info` (
                                  KEY `IDX5b1nhpe5je7gc5s1ur200njr7` (`job_id`),
                                  KEY `IDXjnji5lrr195kswk6f7mfhinrs` (`app_id`),
                                  KEY `IDXa98hq3yu0l863wuotdjl7noum` (`instance_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for job_info
@@ -115,7 +115,7 @@ CREATE TABLE `job_info` (
                             `time_expression_type` int DEFAULT NULL,
                             PRIMARY KEY (`id`),
                             KEY `IDXk2xprmn3lldmlcb52i36udll1` (`app_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for oms_lock
@@ -130,7 +130,7 @@ CREATE TABLE `oms_lock` (
                             `ownerip` varchar(255) DEFAULT NULL,
                             PRIMARY KEY (`id`),
                             UNIQUE KEY `lockNameUK` (`lock_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for server_info
@@ -143,7 +143,7 @@ CREATE TABLE `server_info` (
                                `ip` varchar(255) DEFAULT NULL,
                                PRIMARY KEY (`id`),
                                UNIQUE KEY `UKtk8ytgpl7mpukhnvhbl82kgvy` (`ip`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for user_info
@@ -160,7 +160,7 @@ CREATE TABLE `user_info` (
                              `username` varchar(255) DEFAULT NULL,
                              `web_hook` varchar(255) DEFAULT NULL,
                              PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for workflow_info
@@ -184,7 +184,7 @@ CREATE TABLE `workflow_info` (
                                  `wf_name` varchar(255) DEFAULT NULL,
                                  PRIMARY KEY (`id`),
                                  KEY `IDX7uo5w0e3beeho3fnx9t7eiol3` (`app_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for workflow_instance_info
@@ -206,7 +206,7 @@ CREATE TABLE `workflow_instance_info` (
                                           `wf_instance_id` bigint DEFAULT NULL,
                                           `workflow_id` bigint DEFAULT NULL,
                                           PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for workflow_node_info
@@ -228,6 +228,6 @@ CREATE TABLE `workflow_node_info` (
                                       PRIMARY KEY (`id`),
                                       KEY `IDX36t7rhj4mkg2a5pb4ttorscta` (`app_id`),
                                       KEY `IDXacr0i6my8jr002ou8i1gmygju` (`workflow_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 SET FOREIGN_KEY_CHECKS = 1;
